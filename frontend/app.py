@@ -5,7 +5,7 @@ import os
 import requests
 from pywebio import start_server
 from pywebio.output import put_text, put_markdown, put_success, put_error
-from pywebio.input import input, TEXT
+from pywebio.input import input, TEXT, select
 
 
 # Specify the backent URL to connect to. This is the backend API microservice 
@@ -37,7 +37,7 @@ def add_quote():
                 
 #--------------------ADD QUOTE COMPLETED-------------------------------
 
-#Function to show daily quotes
+# Function to show daily quotes
 
 def show_daily_quote():
         try:
@@ -58,4 +58,28 @@ def show_daily_quote():
 
 #--------------------SHOW DAILY QUOTE COMPLETED-------------------------------
 
+# Main function. Program starts from here.
 
+def main():
+        
+        #Heading for out home page
+        put_markdown("# 🌟 Quotes Maker — Frontend")
+
+        # Option chooser
+        put_markdown("Choose an option:")
+        action = select("Select an option", ["Add Quote", "View Quote"])
+        
+        # Call the function according to the selection
+        if action.lower() == "add quote":
+            add_quote()
+        elif action.lower() == "view quote":
+            show_daily_quote()
+        else:
+            put_error("Invalid option")
+
+
+# Start the server on port 8080
+if __name__ == "__main__":
+    start_server(main, port=8080, debug=True)
+
+#--------------------MAIN FUNCTION COMPLETED-------------------------------
