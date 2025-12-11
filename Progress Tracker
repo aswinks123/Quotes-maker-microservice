@@ -1,0 +1,6 @@
+10/12/2025: 
+
+We created the basic frontend UI. Currently the Backend API and Databse are not developed, so the functionality breaks, but the app can be run.
+Also created a feature branch for continue working on front end.
+Branch name: frontend-feature
+
