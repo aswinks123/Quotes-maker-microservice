@@ -80,4 +80,4 @@ Goal:
 Build step-by-step, learn each part, and keep the repository clean.
 
 
-More detals and features will be added when we complete each phase of the project
+More detals and features will be added when we complete each phase of the project. We will be developing the software from feature branches and after testing we will merge to master branch
