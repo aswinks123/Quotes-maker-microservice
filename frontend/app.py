@@ -1,3 +1,5 @@
+# Created by: Aswin KS
+
 # Import the required modules
 import os
 import requests
@@ -33,7 +35,27 @@ def add_quote():
         except Exception as e:
                     put_error(f"Error connecting the backend: {e}")
                 
-        
+#--------------------ADD QUOTE COMPLETED-------------------------------
 
+#Function to show daily quotes
+
+def show_daily_quote():
+        try:
+                # sent a get request to backend API
+                resp = requests.get(f"{BACKEND_URL}/quotes/daily")
+
+                # if return code is 200 then print the quote, if not print the error
+                if resp.status_code == 200:
+                        quote = resp.json().get("quote") 
+                        put_markdown(f"### Daily Motivation\n\n> {quote}")
+                else:
+                        put_error("Failed to fetch quotes")
+                # if any exception, print the exception
+        except Exception as e:
+                put_error(f"Error connecting to backend: {e}")
+
+
+
+#--------------------SHOW DAILY QUOTE COMPLETED-------------------------------
 
 
