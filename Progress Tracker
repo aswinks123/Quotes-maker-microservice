@@ -4,3 +4,6 @@ We created the basic frontend UI. Currently the Backend API and Databse are not 
 Also created a feature branch for continue working on front end.
 Branch name: frontend-feature
 
+Next Plan:
+
+Develop the backend API to handle the API requests and to store and retreive quote from database.
