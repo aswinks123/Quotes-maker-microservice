@@ -9,6 +9,52 @@ The system consists of a frontend, a backend API, and a database, all deployed a
 This project is intentionally simple but architected like a real cloud-native system, making it perfect for hands-on learning.
 
 
+## Current Status:
+
+main branch contains the first version of application
+
+main merged from frontend-feature branch:  frontend-v1
+
+main merged from backend-feature branch: backend-v1
+
+main contains the first version of application -v1
+
+
+
+## Sample screenshots
+
+
+### Home Page
+
+![alt text](./resources/image.png)
+
+### Add a new quote
+
+![alt text](./resources/image-1.png)
+
+![alt text](./resources/image-2.png)
+
+### View the Quotes
+
+![alt text](./resources/image-3.png)
+
+![alt text](./resources/image-4.png)
+
+### Content of quotes database
+
+![alt text](./resources/image-5.png)
+
+
+
+
+
+
+
+
+
+
+
+
 ## Application Components
 
 
@@ -44,40 +90,3 @@ Runs as a Kubernetes StatefulSet
 Stores quotes in a single table
 
 Uses PersistentVolumeClaim for data durability
-
-
-
-## Development Workflow (Git Branching Model)
-
-1. Main Branch
-
-Always stable
-
-Contains production-ready configuration
-
-Only receives pull requests from feature branches
-
-2. Feature Branches
-
-Each new component or improvement is done in a separate branch like:
-
-feature/frontend-ui
-
-feature/backend-api
-
-feature/db-setup
-
-feature/helm-chart-base
-
-feature/ingress
-
-feature/new-endpoint-random-quote
-
-After testing, each feature branch is merged to main via PR.
-
-Goal:
-
-Build step-by-step, learn each part, and keep the repository clean.
-
-
-More detals and features will be added when we complete each phase of the project. We will be developing the software from feature branches and after testing we will merge to master branch
