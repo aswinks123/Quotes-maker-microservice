@@ -25,8 +25,8 @@ def add_quote():
         
         # if user type a valid quote, then sent a post request to backend API to add it to the database.
         try:
-                resp = requests.post(f"{BACKEND_URL}/quotes", json={"quote":quote})
-                if resp.status_code == 201:
+                resp = requests.post(f"{BACKEND_URL}/add_quote", json={"quote":quote})
+                if resp.status_code in [200,201]:
                         put_success("Quote added successfully")
                 # if the return code is not success then print the error
                 else:
@@ -42,7 +42,7 @@ def add_quote():
 def show_daily_quote():
         try:
                 # sent a get request to backend API
-                resp = requests.get(f"{BACKEND_URL}/quotes/daily")
+                resp = requests.get(f"{BACKEND_URL}/quote")
 
                 # if return code is 200 then print the quote, if not print the error
                 if resp.status_code == 200:
