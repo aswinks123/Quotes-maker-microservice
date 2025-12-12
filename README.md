@@ -39,7 +39,9 @@ View the Quote
 
 ![alt text](image-4.png)
 
+Content of quotes Database
 
+![alt text](image-5.png)
 
 
 
