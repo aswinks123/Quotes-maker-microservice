@@ -13,11 +13,11 @@ This project is intentionally simple but architected like a real cloud-native sy
 
 main branch contains the first version of application
 
-frontend Merged from frontend-feature branch:  frontend-v1
+main merged from frontend-feature branch:  frontend-v1
 
-backend Merged from frontend-feature branch: backend-v1
+main merged from backend-feature branch: backend-v1
 
-main contains the first version of application
+main contains the first version of application -v1
 
 
 
