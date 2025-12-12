@@ -23,25 +23,27 @@ main contains the first version of application
 
 ## Sample screenshots
 
-Home Page
 
-![alt text](image.png)
+### Home Page
 
-Add a new quote
+![alt text](./resources/image.png)
 
-![alt text](image-1.png)
+### Add a new quote
 
-![alt text](image-2.png)
+![alt text](./resources/image-1.png)
 
-View the Quote
+![alt text](./resources/image-2.png)
 
-![alt text](image-3.png)
+### View the Quotes
 
-![alt text](image-4.png)
+![alt text](./resources/image-3.png)
 
-Content of quotes Database
+![alt text](./resources/image-4.png)
 
-![alt text](image-5.png)
+### Content of quotes database
+
+![alt text](./resources/image-5.png)
+
 
 
 
