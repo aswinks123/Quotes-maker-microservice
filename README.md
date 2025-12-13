@@ -114,7 +114,6 @@ Uses PersistentVolumeClaim for data durability
 ```
 
 Next Step:
-
 ```
 Create a staging branch, and merge all changes.
 Test the application in this branch.
