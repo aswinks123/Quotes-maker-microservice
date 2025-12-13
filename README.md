@@ -9,17 +9,17 @@ The system consists of a frontend, a backend API, and a database, all deployed a
 This project is intentionally simple but architected like a real cloud-native system, making it perfect for hands-on learning.
 
 
-## Current Status:
-
-main branch contains the first version of application
-
-main merged from frontend-feature branch:  frontend-v1
-
-main merged from backend-feature branch: backend-v1
-
-main contains the first version of application -v1
+## Application Components: Version-1
 
 
+| Component | Technology | Description | Notes |
+|-----------|-----------|-------------|-------|
+| Frontend | Python PyWebIO | Runs as a standalone container. Provides two features: Add Quote form, View Daily Quote (fetched from backend). | Communicates with backend over HTTP  |
+| Backend API | Python Flask | Exposes REST API: GET /quotes → returns random/daily quote, POST /quotes → adds a new quote. Connects to PostgreSQL container using environment variables. | Will have more endpoints in future features |
+| Database | PostgreSQL | Runs as a Kubernetes StatefulSet. Stores quotes in a single table. | Uses PersistentVolumeClaim for data durability |
+
+
+Note: This is the plan for version 1 of the application. We will add more components as we progress.
 
 ## Sample screenshots
 
@@ -46,19 +46,9 @@ main contains the first version of application -v1
 
 
 
-## Application Components: Version-1
 
 
-| Component | Technology | Description | Notes |
-|-----------|-----------|-------------|-------|
-| Frontend | Python PyWebIO | Runs as a standalone container. Provides two features: Add Quote form, View Daily Quote (fetched from backend). | Communicates with backend over HTTP  |
-| Backend API | Python Flask | Exposes REST API: GET /quotes → returns random/daily quote, POST /quotes → adds a new quote. Connects to PostgreSQL container using environment variables. | Will have more endpoints in future features |
-| Database | PostgreSQL | Runs as a Kubernetes StatefulSet. Stores quotes in a single table. | Uses PersistentVolumeClaim for data durability |
-
-
-Note: This is the plan for version 1 of the application. We will add more components as we progress.
-
-# Activity History
+## Activity History
 
 10/12/2025: 
 
