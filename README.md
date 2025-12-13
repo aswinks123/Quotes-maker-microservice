@@ -49,38 +49,12 @@ main contains the first version of application -v1
 ## Application Components
 
 
-1. Frontend (Python PyWebIO) 
+| Component | Technology | Description | Notes |
+|-----------|-----------|-------------|-------|
+| Frontend | Python PyWebIO | Runs as a standalone container. Provides two features: Add Quote form, View Daily Quote (fetched from backend). | Communicates with backend over HTTP (ClusterIP service) |
+| Backend API | Python Flask | Exposes REST API: GET /quotes/daily → returns random/daily quote, POST /quotes → adds a new quote. Connects to PostgreSQL using environment variables. | Will have more endpoints in future features |
+| Database | PostgreSQL | Runs as a Kubernetes StatefulSet. Stores quotes in a single table. | Uses PersistentVolumeClaim for data durability |
 
-Runs as a standalone container
-
-Provides two features:
-
-Add Quote form
-
-View Daily Quote (fetched from backend)
-
-Communicates with backend over HTTP (ClusterIP service)
-
-
-2. Backend API (Python Flask)
-
-Exposes REST API:
-
-GET /quotes/daily → returns random or daily quote
-
-POST /quotes → adds a new quote
-
-Connects to PostgreSQL using environment variables
-
-Will have more endpoints in future features
-
-3. Database (PostgreSQL)
-
-Runs as a Kubernetes StatefulSet
-
-Stores quotes in a single table
-
-Uses PersistentVolumeClaim for data durability
 
 
 # Activity History
