@@ -1,12 +1,8 @@
 # 📄 Project Description
 
-Quotes maker is a containerized microservice application designed to help users store and view motivational quotes. 
+Quotes Maker is a lightweight, cloud-ready application that lets users add and view motivational quotes. It’s designed with a microservices architecture, containerized for deployment on Kubernetes, and integrates a modern CI/CD workflow.
 
-The project is built to practice real-world Kubernetes, Helm, microservices, and CI/CD branching strategies.
-
-The system consists of a frontend, a backend API, and a database, all deployed as separate containers managed entirely on Kubernetes using Helm charts.
-
-This project is intentionally simple but architected like a real cloud-native system, making it perfect for hands-on learning.
+The project is built with Python PyWebIO for the frontend and Python Flask for the backend API, with PostgreSQL as the persistent database. The frontend communicates with the backend over HTTP, and the backend manages all quote storage and retrieval.
 
 
 ## Application Components: Version-1
@@ -35,7 +31,7 @@ Note: This is the plan for version 1 of the application. We will add more compon
 | CI/CD                   | GitHub Actions            | Automate testing, build, and deployment |
 | Monitoring & Metrics    | Prometheus                | Collect metrics from services and containers |
 | Visualization / Alerts  | Grafana                   | Dashboard and alerting for metrics |
-| Infrastructure          | Linux                     | Deployment of devOps tools and management |
+| Infrastructure          | Linux                     | Deployment of DevOps tools, administration |
 
 
 ## Sample screenshots
