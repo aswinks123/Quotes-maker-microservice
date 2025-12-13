@@ -22,8 +22,7 @@
 
 Next Step:
 
-```
+
 Create a staging branch, and merge all changes.
 Test the application in this branch.
 Integrate github Actions to automate build and push image to DockerHub - Continuous Integration
-```

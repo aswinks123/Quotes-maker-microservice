@@ -1,24 +1,37 @@
-# 📄 Project Description
+# 🧑‍💻 Project Description
 
-Quotes maker is a containerized microservice application designed to help users store and view motivational quotes. 
+Quotes Maker is a lightweight, cloud-ready application that lets users add and view motivational quotes. It’s designed with a microservices architecture, containerized for deployment on Kubernetes, and integrates a modern CI/CD workflow.
 
-The project is built to practice real-world Kubernetes, Helm, microservices, and CI/CD branching strategies.
-
-The system consists of a frontend, a backend API, and a database, all deployed as separate containers managed entirely on Kubernetes using Helm charts.
-
-This project is intentionally simple but architected like a real cloud-native system, making it perfect for hands-on learning.
+The project is built with Python PyWebIO for the frontend and Python Flask for the backend API, with PostgreSQL as the persistent database. The frontend communicates with the backend over HTTP, and the backend manages all quote storage and retrieval.
 
 
-## Current Status:
+## Application Components: Version-1
 
-main branch contains the first version of application
 
-main merged from frontend-feature branch:  frontend-v1
+| Component | Technology | Description | Notes |
+|-----------|-----------|-------------|-------|
+| Frontend | Python PyWebIO | Runs as a standalone container. Provides two features: Add Quote form, View Daily Quote (fetched from backend). | Communicates with backend over HTTP  |
+| Backend API | Python Flask | Exposes REST API: GET /quotes → returns random/daily quote, POST /quotes → adds a new quote. Connects to PostgreSQL container using environment variables. | Will have more endpoints in future features |
+| Database | PostgreSQL | Runs as a Kubernetes StatefulSet. Stores quotes in a single table. | Uses PersistentVolumeClaim for data durability |
 
-main merged from backend-feature branch: backend-v1
 
-main contains the first version of application -v1
+Note: This is the plan for version 1 of the application. We will add more components as we progress.
 
+
+## Technology Stack
+
+| Component        | Technology        | Purpose  |
+|-------------------------|---------------------------|----------------|
+| Frontend                | Python PyWebIO            | User interface for adding and viewing quotes |
+| Backend API             | Python Flask              | REST API for managing quotes |
+| Database                | PostgreSQL                | Stores quotes with data durability |
+| Containerization        | Docker                    | Package frontend and backend into containers |
+| Orchestration           | Kubernetes                | Deploy and manage containers in cluster |
+| Deployment Management   | Helm                      | Package and deploy Kubernetes resources |
+| CI/CD                   | GitHub Actions            | Automate testing, build, and deployment |
+| Monitoring & Metrics    | Prometheus                | Collect metrics from services and containers |
+| Visualization / Alerts  | Grafana                   | Dashboard and alerting for metrics |
+| Infrastructure          | Linux                     | Deployment of DevOps tools, administration |
 
 
 ## Sample screenshots
@@ -46,44 +59,9 @@ main contains the first version of application -v1
 
 
 
-## Application Components
 
 
-1. Frontend (Python PyWebIO) 
-
-Runs as a standalone container
-
-Provides two features:
-
-Add Quote form
-
-View Daily Quote (fetched from backend)
-
-Communicates with backend over HTTP (ClusterIP service)
-
-
-2. Backend API (Python Flask)
-
-Exposes REST API:
-
-GET /quotes/daily → returns random or daily quote
-
-POST /quotes → adds a new quote
-
-Connects to PostgreSQL using environment variables
-
-Will have more endpoints in future features
-
-3. Database (PostgreSQL)
-
-Runs as a Kubernetes StatefulSet
-
-Stores quotes in a single table
-
-Uses PersistentVolumeClaim for data durability
-
-
-# Activity History
+## Activity History
 
 10/12/2025: 
 
@@ -105,7 +83,7 @@ Uses PersistentVolumeClaim for data durability
 ```
 
 
-13/12/2015: Completed
+13/12/2015:
 
 ```
 1. Create containers for frontend and backend
