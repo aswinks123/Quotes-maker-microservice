@@ -9,6 +9,43 @@ The system consists of a frontend, a backend API, and a database, all deployed a
 This project is intentionally simple but architected like a real cloud-native system, making it perfect for hands-on learning.
 
 
+## Current Status:
+
+main branch contains the first version of application
+
+main merged from frontend-feature branch:  frontend-v1
+
+main merged from backend-feature branch: backend-v1
+
+main contains the first version of application -v1
+
+
+
+## Sample screenshots
+
+
+### Home Page
+
+![alt text](./resources/image.png)
+
+### Add a new quote
+
+![alt text](./resources/image-1.png)
+
+![alt text](./resources/image-2.png)
+
+### View the Quotes
+
+![alt text](./resources/image-3.png)
+
+![alt text](./resources/image-4.png)
+
+### Content of quotes database
+
+![alt text](./resources/image-5.png)
+
+
+
 ## Application Components
 
 
@@ -46,38 +83,40 @@ Stores quotes in a single table
 Uses PersistentVolumeClaim for data durability
 
 
+# Activity History
 
-## Development Workflow (Git Branching Model)
+10/12/2025: 
 
-1. Main Branch
+```
+1. We created the basic frontend UI. Currently the Backend API and Databse are not developed, so the functionality breaks, but the app can be run.
+2. Also created a feature branch for continue working on front end.
+3. Branch name: frontend-feature
+```
 
-Always stable
+12/12/2025: 
 
-Contains production-ready configuration
-
-Only receives pull requests from feature branches
-
-2. Feature Branches
-
-Each new component or improvement is done in a separate branch like:
-
-feature/frontend-ui
-
-feature/backend-api
-
-feature/db-setup
-
-feature/helm-chart-base
-
-feature/ingress
-
-feature/new-endpoint-random-quote
-
-After testing, each feature branch is merged to main via PR.
-
-Goal:
-
-Build step-by-step, learn each part, and keep the repository clean.
+```
+1. Created a backend API that input the quote and retreive it from a list, and created a new branch called: frontend-feature
+2. After the basic testing, we removed the list and integrated it with postgres database
+3. Postgres deployed as a docker container
+4. Tested the integration, and first version of application is ready
+5. Sample screenshot added for reference
+6. Finally merged it to main branch
+```
 
 
-More detals and features will be added when we complete each phase of the project. We will be developing the software from feature branches and after testing we will merge to master branch
+13/12/2015: Completed
+
+```
+1. Create containers for frontend and backend
+2. Push to Dockerhub
+3. Deploy it in docker environment and verify the working
+```
+
+Next Step:
+
+```
+Create a staging branch, and merge all changes.
+Test the application in this branch.
+Integrate github Actions to automate build and push image to DockerHub - Continuous Integration
+```

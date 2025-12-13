@@ -1,0 +1,29 @@
+10/12/2025: Completed
+
+1. We created the basic frontend UI. Currently the Backend API and Databse are not developed, so the functionality breaks, but the app can be run.
+2. Also created a feature branch for continue working on front end.
+3. Branch name: frontend-feature
+
+
+12/12/2025: Completed
+
+1. Created a backend API that input the quote and retreive it from a list, and created a new branch called: frontend-feature
+2. After the basic testing, we removed the python list and integrated it with postgres database to store quotes
+3. Postgres deployed as a docker container
+4. Tested the integration, and first version of application is ready
+5. Sample screenshot added for reference
+
+
+13/12/2015: Completed
+
+1. Create containers for frontend and backend
+2. Push to Dockerhub
+3. Deploy it in docker environment and verify the working
+
+Next Step:
+
+```
+Create a staging branch, and merge all changes.
+Test the application in this branch.
+Integrate github Actions to automate build and push image to DockerHub - Continuous Integration
+```
