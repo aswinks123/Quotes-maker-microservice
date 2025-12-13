@@ -16,7 +16,7 @@ COPY . .
 EXPOSE 8080
 
 # Set environment variable for backend (default fallback)
-ENV BACKEND_URL=http://backend:5000
+ENV BACKEND_URL=http://quotes-backend:5000
 
 # Start the PyWebIO server
 CMD ["python", "app.py"]
