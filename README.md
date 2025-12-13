@@ -96,7 +96,7 @@ Uses PersistentVolumeClaim for data durability
 12/12/2025: 
 
 ```
-1. Created a backend API that input the quote and retreive it from a list
+1. Created a backend API that input the quote and retreive it from a list, and created a new branch called: frontend-feature
 2. After the basic testing, we removed the list and integrated it with postgres database
 3. Postgres deployed as a docker container
 4. Tested the integration, and first version of application is ready
@@ -105,10 +105,18 @@ Uses PersistentVolumeClaim for data durability
 ```
 
 
-Next Plan:
+13/12/2015: Completed
 
 ```
 1. Create containers for frontend and backend
 2. Push to Dockerhub
 3. Deploy it in docker environment and verify the working
+```
+
+Next Step:
+
+```
+Create a staging branch, and merge all changes.
+Test the application in this branch.
+Integrate github Actions to automate build and push image to DockerHub - Continuous Integration
 ```
