@@ -83,7 +83,7 @@ Note: This is the plan for version 1 of the application. We will add more compon
 ```
 
 
-13/12/2015: Completed
+13/12/2015:
 
 ```
 1. Create containers for frontend and backend
