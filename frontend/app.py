@@ -10,7 +10,7 @@ from pywebio.input import input, TEXT, select
 
 # Specify the backent URL to connect to. This is the backend API microservice 
 
-BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:5000") 
+BACKEND_URL = os.getenv("BACKEND_URL", "http://quotes-backend:5000") 
 
 # Function to add quotes
 
