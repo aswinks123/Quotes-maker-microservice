@@ -1,4 +1,4 @@
-# 📄 Project Description
+# 🧑‍💻 Project Description
 
 Quotes Maker is a lightweight, cloud-ready application that lets users add and view motivational quotes. It’s designed with a microservices architecture, containerized for deployment on Kubernetes, and integrates a modern CI/CD workflow.
 
