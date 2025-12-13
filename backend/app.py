@@ -18,7 +18,7 @@ app = Flask(__name__)
 POSTGRES_USER = os.getenv("POSTGRES_USER", "postgres")  # default values is provided at end
 POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD", "postgres")
 POSTGRES_DB = os.getenv("POSTGRES_DB", "quotesdb")
-POSTGRES_HOST = os.getenv("POSTGRES_HOST", "localhost")
+POSTGRES_HOST = os.getenv("POSTGRES_HOST", "quotes-postgres")
 POSTGRES_PORT = os.getenv("POSTGRES_PORT", "5432")
 
 # SQLALCHEMY_DATABASE_URI tells SQLAlchemy where the database is.
