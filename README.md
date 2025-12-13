@@ -21,6 +21,23 @@ This project is intentionally simple but architected like a real cloud-native sy
 
 Note: This is the plan for version 1 of the application. We will add more components as we progress.
 
+
+## Technology Stack
+
+| Component        | Technology        | Purpose  |
+|-------------------------|---------------------------|----------------|
+| Frontend                | Python PyWebIO            | User interface for adding and viewing quotes |
+| Backend API             | Python Flask              | REST API for managing quotes |
+| Database                | PostgreSQL                | Stores quotes with data durability |
+| Containerization        | Docker                    | Package frontend and backend into containers |
+| Orchestration           | Kubernetes                | Deploy and manage containers in cluster |
+| Deployment Management   | Helm                      | Package and deploy Kubernetes resources |
+| CI/CD                   | GitHub Actions            | Automate testing, build, and deployment |
+| Monitoring & Metrics    | Prometheus                | Collect metrics from services and containers |
+| Visualization / Alerts  | Grafana                   | Dashboard and alerting for metrics |
+| Infrastructure          | Linux                     | Deployment of devOps tools and management |
+
+
 ## Sample screenshots
 
 
